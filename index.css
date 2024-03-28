@@ -1,0 +1,501 @@
+body{
+    background-color: #000;
+    color: #FFFFFF;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 1000px;
+    color: #FFFFFF;
+    position: relative;
+}
+.active{
+    text-decoration: underline;
+}
+
+nav h1{  
+    flex: 6;
+    font-size: 4em;
+}
+h1 img{
+    height: 100px; 
+    width:100px;
+}
+
+ul{
+    flex: 4;
+    margin-top: 110px;
+}
+li{
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20%;
+    list-style: none;
+    display: inline;
+    margin: 0  20px 20px 0;
+    font-size: 1.5em;
+    line-height: 4em;
+    background-image: linear-gradient(#FFFFFF,#FFFFFF);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: .5s;
+    flex-wrap: wrap;
+}
+li:hover > a{
+    text-shadow: 
+    0 -1.2em #FFFFFF, 
+    0 0 #AA0000;
+    color: #AA0000;
+}
+li:hover{
+    background-size: 100% 100%
+}
+
+li a{
+    margin-bottom: 20px;
+    text-shadow: 
+    0 0 #FFFFFF, 
+    0 1.2em #000;
+    overflow: hidden;
+    transition: .5s;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+nav h2{
+    position: absolute;
+    bottom: 30%;
+    left: 20%;
+    font-size: 3em;
+    line-height: 1.5em;
+}
+
+nav button{
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+    font-size: 2em;
+    background-color: #808080;
+    border-radius: 20px;
+    width: 20%;
+    height: 10%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+nav button:hover{
+    animation: pulse 1.5s infinite;
+
+}
+@keyframes pulse {     
+    0% {
+        transform: scale(1);
+        background-color: #808080;
+    }
+    30% {
+		transform: scale(0.8);
+        background-color: #AA0000;	
+    }
+    70% {
+		transform: scale(1.1);
+        background-color: #AA0000;	}
+
+	100% {
+		transform: scale(1);
+        background-color: #808080;	} 
+}
+.courses-description{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.courses-description h2{
+    font-size: 3em;
+}
+.courses-description p{
+    font-size: 2em;
+    color: #808080;
+    margin: 0 20px 100px 20px;
+}
+.courses-group{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.courses{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 40px;
+}
+p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.courses img{
+    border-radius: 50%;
+    margin-bottom: 30px;
+    height: 300px;
+    width: 300px;
+}
+.courses img:hover{
+    transform: scale(1.1) translate(10px, 10px);
+    transition: .5s;
+    box-shadow: -15px -15px 15px whitesmoke;
+}
+
+footer{
+    display: flex;
+    color: white;
+    width: 100%;
+    background: radial-gradient(circle,rgba(128,128,128,1) 30%, rgba(0,0,0,1) 70%);    
+    position: relative;
+    bottom: 0;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.social{
+    display: flex;
+    gap: 40px;
+}
+footer h3{
+    font-size: 2rem;
+}
+.social button{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+.facebook{
+    background-image: url("assets/facebook_256x256.webp");
+    background-size: cover;
+}
+.x{
+    background-image: url("assets/x-256x256.webp");
+    background-size: cover;
+}
+.tik-tok{
+    background-image: url("assets/tiktok-256x256.webp");
+    background-size: cover;
+}
+.instagram{
+    background-image: url("assets/instagram-256x256.webp");
+    background-size: cover;
+}
+.social a{
+    font-size: 20px;
+}
+.two-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, auto));
+    gap: 30px;
+    margin: 30px;
+}
+.two-columns:hover > *{
+    opacity: 0.5;
+}
+.two-columns:hover > *:hover{
+    opacity: 1;
+    box-shadow: 10px 10px 20px 0px rgb(255, 255, 255);
+    transition: .5s ease;
+}
+
+.card{
+    display: grid;
+    grid-template-columns:  1fr 20px 300px;
+    grid-template-rows: 300px 1fr  ;
+    grid-template-areas: 
+    "p img img "
+    "p h3 h3 ";
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 30px;
+    background: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(128,128,128,1) 100%);    
+}
+
+
+.card h3{
+    grid-area: h3;
+    align-self: center;
+    font-size: 2rem;
+    justify-self: center;
+}
+.card img{
+    border-radius: 50%;
+    grid-area: img;
+    margin-left: 20px;
+    height: 300px;
+    width: 300px;
+}
+.card p{
+    grid-area: p;
+    align-self: center;
+}
+
+.xlinks:hover{
+    text-decoration:  #AA0000 underline;
+}
+.card button{
+    margin: 20px auto;
+    background-color: #AA0000;
+    border-radius: 20px;
+    width: 60%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.white{
+    color: white;
+}
+
+table{
+    background-color: #FFFFFF;
+    font-size: 2em;
+    margin: 30px auto;
+    width: 80%;
+    height: fit-content;
+}
+
+col:nth-child(even){
+    background-color: #AA0000;
+}
+col:nth-child(odd){
+    background-color: #808080;
+}
+
+
+th, td{
+    padding: 10px;
+    text-align: center;
+}
+.hours-lesson{
+    font-size: .7em;
+}
+.center{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3em;
+}
+.contact{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 150px 1fr;
+    grid-template-areas:
+    "h2 h2 " 
+    "h3 form";
+}
+.contact h2{
+    grid-area: h2;
+    text-align: center;
+    font-size: 3em;    
+}
+.info{
+    margin: 0 auto;
+}
+.info h3{
+    color: #AA0000;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    grid-area: form;
+}
+form > *{
+    padding: 20px 10px;
+}
+form > *:hover{
+    border: 3px solid #AA0000;
+}
+
+#submit{
+    width: 50%;
+    border-radius: 30px;
+    margin: 30px auto;
+    background-color: #AA0000;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.contact h3{
+    grid-area: h3;
+    font-size: 2rem;
+}
+.checkbox{
+    line-height: 30px;
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+@media only screen and (max-width:2035px) {
+    ul{
+        flex: 2;
+    }
+}
+
+
+@media only screen and (max-width:1680px) {
+    ul{
+        margin-top: 10px;
+        flex: 1;
+    }
+    nav h2{
+        bottom: 25%;
+    }  
+}
+
+@media only screen and (max-width:1350px) {
+   .two-columns{
+    grid-template-columns: auto;
+    width: 80%;
+    margin: 20px auto;
+    }
+    table{
+        font-size: 1.5em;
+    }
+    .center{
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width:1097px) {
+    h1{
+        flex: 4;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .courses-group{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    #girl{
+        height: 600px;
+        width: 300px;
+        align-self: end;
+    }  
+    table{
+        font-size: 1.2em;
+    }
+}
+@media only screen and (max-width:800px) {
+    ul{
+       width: 50%;
+    }
+    nav h2{
+        font-size: 2em;
+        bottom: 30%;
+    } 
+    nav button{
+        animation: pulse 1.5s infinite;
+    }
+    .social button{
+        height: 75px;
+        width: 75px;
+    }
+    .card img{
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 20px;
+    } 
+    .card{
+        grid-template-areas: 
+        "img img h3"
+        "p p p";
+    }
+    .two-columns{
+        width: 100%;
+    }
+    .card h3{
+        font-size: 1.5em ;
+    }
+    p{
+        font-size: 1.3em;
+    }
+    table{
+        font-size: .8em;
+    }
+}
+@media only screen and (max-width:630px) {
+    ul{
+        width: 30%;
+    }
+    nav h2{
+        font-size: 1.3em;
+        bottom: 15%;
+    }
+    nav button{
+        bottom: 5%;
+        width: 20%;
+        height: 5%;
+        font-size: 1em;
+    }
+    #girl{
+        height: 400px;
+        width: 200px;
+    }  
+    .courses-description p{
+        font-size: 1.5em;
+    }
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 50px 1fr;
+        grid-template-areas: 
+            "img"
+            "h3"
+            "p";    }
+    .timetable{
+        font-size: .5em;
+    }
+    
+}
+@media only screen and (max-width:430px) {
+    nav{
+        height: 755px;
+    }
+    nav h1{
+        font-size: 2.5em;
+        flex: 1;
+    }
+    ul{
+        flex: 5;
+    }
+    li{
+        font-size: 1em ;
+    }
+    nav h2{
+        left: 5%;
+        bottom: 10%;
+    } 
+    #girl{
+        height: 300px ;
+        width: 150px;
+    }
+    .social{
+        gap:5px;
+    }
+    .courses img{
+        height: 200px;
+        width: 200px;
+    }
+    .card img{
+        height: 200px;
+        width: 200px;
+    }
+    .timetable td, .timetable th{
+        padding: 4px 2px;
+    }
+    .center{
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="keyword" content="gym, fitness, boxing, calisthenics, weight, dance, yoga, weight loss ">
+    <meta name="description" content="Gymtastic is a gym where you can express yourself in your own way building up new healty habits and">
+    <link rel="stylesheet" href="index.css">
+        <title>Gymtastic</title>
+</head>
+<body>
+    <header>
+        <nav>
+            
+        <h1>
+        <img src="assets/body-builder.webp" alt="gym logo">
+            Gymtastic
+        </h1>
+            <ul>
+                
+                <li>
+                    <a href="index.html"> Home </a>
+                </li>
+         
+            
+                <li>
+                    <a href="courses.html"> Courses </a>
+                </li>
+           
+                <li> 
+                    <a href="join.html"> Join </a>
+
+                </li>
+                <li> 
+                    <a href="contact.html" class="active"> Contact </a>  
+                </li>
+           
+            </ul>
+
+            <img src="assets/pexels-scott-webb-28054.webp" alt="Gym Girl" id="girl">
+
+
+            <h2>
+                Three little words: <br> You've <br> Got <br> This
+            </h2>
+
+           <a href="join.html"><button>Join us</button></a>
+            
+        </nav>
+    </header>
+    <main class="contact">
+        <h2>
+            Contacts
+        </h2>
+        <div class="info"> 
+            <h3>
+                Address
+            </h3>
+            <p>
+                44 Baggot Street Lower 
+            </p>
+            <p> D02 RF98 </p>
+
+            <h3>
+                Phone
+            </h3>
+            <p>
+                +353 87 6883231
+            </p>
+
+            <h3>
+                Email
+            </h3>
+            <a href="mailto: info@gymtastic.ie" class="xlinks">
+                <p>
+                    info@gymtastic.ie 
+                </p>
+            </a>
+        </div>
+       
+        <form action="http://webdevbasics.net/scripts/demo.php" method="post">
+            <input type="text" name="fname" id="fname" placeholder="Name" required>
+            <input type="text" name="lname" id="lname" placeholder="Surname" required>
+            <select name="nationality" id="nationality">
+                <option value="nationality">Nationality</option>
+                <option value="Italian">Italian</option>
+                <option value="Irish">Irish</option>
+                <option value="English">English</option>
+                <option value="Brazilian">Brazilian</option>
+                <option value="Indian">Indian</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="tel" name="phone" id="phone" placeholder="e.g: +353 6883231" pattern="+[0-9]{3} [0-9]{9}" required>
+            <input type="email" name="email" id="email" placeholder="Email address" required>
+            <div class="checkbox">
+                <h4>Courses preferencies:</h4>
+                <input type="checkbox" name="box" id="box" value="box" checked> 
+                <label for="box">Box</label><br>
+
+                <input type="checkbox" name="calisthenics" id="calisthenics" value="calisthenics">
+                <label for="calisthenics">Calisthenics</label><br>
+
+                <input type="checkbox" name="weight" id="weight" value="weight">
+                <label for="weight">Weight training</label><br>
+
+                <input type="checkbox" name="dance" id="dance" value="dance">
+                <label for="dance">Dance class</label><br>
+
+                <input type="checkbox" name="yoga" id="yoga" value="yoga">
+                <label for="yoga">Yoga class</label><br>
+
+                <input type="checkbox" name="wloss" id="wloss" value="wloss">
+                <label for="wloss">Weight loss</label>
+            </div>
+            <div class="checkbox">
+                <h4>Level of fitness</h4>
+                <input type="radio" name="fit" id="below" value="below" checked>
+                <label for="below">Below Average</label><br>
+
+                <input type="radio" name="fit" id="avg" value="avg">
+                <label for="avg"> Average</label><br>
+
+                <input type="radio" name="fit" id="above" value="above">
+                <label for="above">Above Average</label>
+            </div>
+
+
+            
+            <textarea name="query" id="query" cols="10" rows="10" maxlength="200" placeholder="Enter here your query" required></textarea>
+            <input type="submit" value="Submit" id="submit">
+
+        </form>
+    </main>
+</body>
+</html>
